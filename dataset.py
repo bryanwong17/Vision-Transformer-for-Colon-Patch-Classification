@@ -37,7 +37,7 @@ transforms_test = transforms.Compose(
     ]
 )
 
-DATA_PATH_PATCHES = "big_data"
+DATA_PATH_PATCHES = "../dataset/colon_big_data"
 
 class PatchesDataset(torch.utils.data.Dataset):
     """
