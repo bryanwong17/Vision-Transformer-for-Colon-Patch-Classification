@@ -254,7 +254,7 @@ def main():
    
     # train or test mode for data preprocessing
     if args.mode == "train":
-        df = pd.read_csv("big_data/train/train.csv")
+        df = pd.read_csv("../dataset/colon_big_data/train/train.csv")
         # valid_df = pd.read_csv("big_data/valid.csv")
         train_df, valid_df = model_selection.train_test_split(
             df, test_size=0.15, random_state=42, stratify=df.label.values
@@ -278,7 +278,7 @@ def main():
         )
 
     else:
-        test_df = pd.read_csv("big_data/test/test.csv")
+        test_df = pd.read_csv("../dataset/colon_big_data/test/test.csv")
 
         test_dataset = PatchesDataset(test_df, mode="test")
 
